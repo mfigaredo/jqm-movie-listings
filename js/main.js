@@ -91,8 +91,8 @@ function getMovie(movieId)
             <li><strong>Runtime:</strong> ${movie.Runtime}</li>
             <li><strong>IMDB Rating:</strong> ${movie.imdbRating}</li>
             <li><strong>IMDB Votes:</strong> ${movie.imdbVotes}</li>
-            <li><strong>Actors:</strong> ${movie.Actors}</li>
-            <li><strong>Director:</strong> ${movie.Director}</li>
+            <li style="white-space:normal;"><strong>Actors:</strong> ${movie.Actors}</li>
+            <li style="white-space:normal;"><strong>Director:</strong> ${movie.Director}</li>
         `
         $('#movieDetails').html(movieDetails).listview('refresh')
     })
