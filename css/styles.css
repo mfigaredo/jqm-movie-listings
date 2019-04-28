@@ -1,0 +1,20 @@
+
+
+div[data-role=footer] {
+    text-align:center;
+    /* padding: 0px 0; */
+}
+
+div[data-role=main] {
+    padding: 0px 10px;
+}
+
+#movie img {
+    margin: 0 auto;
+    /* width: 100%; */
+    border-radius: 10px;
+}
+
+div#footer {
+    display: none;
+}
