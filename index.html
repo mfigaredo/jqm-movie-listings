@@ -13,17 +13,23 @@
 <body>
 
 	<div id="home" data-role="page">
-		<div data-role="header" data-theme="b">
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<a href="#recent" data-icon="grid" class="ui-btn-left" >Recent</a>
 			<h1>Movie Listings</h1>
+			<a href="#favorites-page" data-icon="heart" class="ui-btn-right">Favorites</a>
 		</div>
 		<div data-role="main">
-			<form id="searchForm">
-				<div class="ui-field-contain">
-					<input type="search" name="searchText" id="searchText" placeholder="Search for a movie..." data-clear-btn="true"
+			<form id="searchForm" class="ui-grid-a">
+
+				  <div class="ui-block-a" style="width: 70%; padding-top: 4px">
+			            <input type="search" name="searchText" id="searchText" placeholder="Search for a movie..." data-clear-btn="true"
 					>
-				</div>
-				<input type="submit" value="Search" class="ui-btn" data-theme="d">
+			      </div>
+			      <div class="ui-block-b" style="width: 30%">
+			            <input type="submit" data-icon="search" data-iconpos="right" value="Search" class="ui-corner-all ui-icon-search ui-btn-inline"/>
+			      </div>
 			</form>
+			
 			<ul id="movies" data-role="listview"></ul>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
@@ -32,18 +38,47 @@
 	</div>
 
 	<div id="movie" data-role="page">
-		<div data-role="header" data-theme="b">
+		<div data-role="header" data-theme="b" data-position="fixed">
 			<h1>Movie Details</h1>
-			<a href="#home" class="ui-btn">Back</a>
+			<a href="#home" class="ui-btn-left" data-icon="search">Search</a>
+			<a href="#favorites-page" data-icon="heart" class="ui-btn-right">Favorites</a>
 		</div>
 		<div data-role="main">
 			<div id="movieTop"></div>
 			<br><br>
 			<ul id="movieDetails" data-role="listview"></ul>
-
+			<div id="favButton"></div>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			
+		</div>
+	</div>
+
+	<div id="recent" data-role="page">
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<h1>Recent Searches</h1>
+			<a href="#home" class="ui-btn-left" data-icon="arrow-l">Back</a>
+		</div>
+		<div data-role="main">
+			
+			<div id="recentSearches"></div>
+
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">		
+		</div>
+	</div>
+
+	<div id="favorites-page" data-role="page">
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<h1>Your Favorites</h1>
+			<a href="#home" class="ui-btn-left" data-icon="search">Search</a>
+		</div>
+		<div data-role="main">
+			
+			<ul id="favorites-list" data-role="listview"></ul>
+
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">		
 		</div>
 	</div>
 
@@ -52,6 +87,7 @@
 		<p>Mike Figaredo &copy; <span id="currentYear"></span></p>
 	</div>
 
+	<script src="node_modules/moment/moment.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

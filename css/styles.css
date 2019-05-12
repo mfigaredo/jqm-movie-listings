@@ -18,3 +18,19 @@ div[data-role=main] {
 div#footer {
     display: none;
 }
+
+#recentSearches {
+	margin-top: 10px;
+	padding: 10px 10px;
+	border-radius: 10px;
+	background-color: #d4d4d3;
+}
+
+#recentSearches .item {
+	padding: 5px;
+	background-color: #e2e3e4;
+	font-weight: bold;
+	display: inline-block;
+	margin: 5px;
+	cursor: pointer;
+}
